@@ -17,11 +17,12 @@ if st.button("Get News Summary"):
         except Exception as e:
             st.error(f"Error: {e}")
     else:
-        st.warning("Please enter a query.")
-        st.sidebar.title('Historical Data Analysis')
+        st.warning("⚠️ Please enter a query.")
+        st.sidebar.title('📂 Historical Data Analysis')
+        st.sidebar.write('### 📌 Past Queries:') 
     if st.sidebar.button('Analyze'):
         with open('queries.txt', 'r') as file:
             queries = file.readlines()
             st.write('### Historical Queries:')
             st.write(queries)
-    
+            
